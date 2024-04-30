@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  myflaskapp:
+    build: .
+    container_name: my_flask_app
+    ports:
+      - '8080:8000' # Change the host port to 8080
+    environment:
+      - FLASK_RUN_HOST=myflaskapp # Set the Flask app host to container name
+    networks:
+      - t_network
+
+networks:
+  t_network:
+    driver: bridge

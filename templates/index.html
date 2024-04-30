@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('../static/images/background.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: #333; /* Color of the content */
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #007bff; /* Color of the heading */
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+      form {
+        text-align: center;
+      }
+      label {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome From the Blog Application</h1>
+      <p>Filter your blog content in a beautiful manner.</p>
+      <form action="/analyze" method="post">
+        <label for="blogContent">Enter your blog content:</label><br />
+        <textarea id="blogContent" name="text" rows="6" cols="50"></textarea
+        ><br />
+        <input type="hidden" name="filter" value="true" />
+        <button type="submit">Filter Blog</button>
+      </form>
+    </div>
+  </body>
+</html>
